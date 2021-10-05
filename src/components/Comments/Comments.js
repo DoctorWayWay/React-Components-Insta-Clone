@@ -1,5 +1,5 @@
 import React from "react";
-import { createPortal } from "react-dom";
+// import { createPortal } from "react-dom";
 import Comment from "./Comment";
 import "./Comments.css";
 
@@ -11,7 +11,7 @@ const Comments = (props) => {
     <div>
       {/* map through the comments prop and render a Comment for every piece of data */}
       {comments.map((comment) => {
-        return <Comment comment={comment} />;
+        return <Comment comment={comment} key={comment.id} />;
       })}
     </div>
   );
